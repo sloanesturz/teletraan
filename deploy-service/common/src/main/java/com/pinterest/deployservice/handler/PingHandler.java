@@ -317,7 +317,7 @@ public class PingHandler {
             LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} waiting for deploy, current {} deploying hosts",
                 envId, tagName, tagValue, hostId, totalActiveAgentsWithHostTag);
             if (totalActiveAgentsWithHostTag >= maxParallelWithHostTag) {
-                LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} can not deploy, {} already exceed {} for constraint = {}, return false",
+                LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} cannot deploy, {} already exceed {} for constraint = {}, return false",
                     envId, tagName, tagValue, hostId, totalActiveAgentsWithHostTag, maxParallelWithHostTag, deployConstraintBean.toString());
                 return false;
             }

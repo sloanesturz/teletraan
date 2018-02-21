@@ -154,7 +154,7 @@ public class CommonHandler {
             // TODO this is Slack specific, screw hipchat for now
             if (deployBean.getSuc_date() != null && deployBean.getSuc_date() != 0L) {
                 // This is failure after previous success
-                return String.format("%s/%s: can not deploy to all the newly provisioned hosts. See details <%s>",
+                return String.format("%s/%s: cannot deploy to all the newly provisioned hosts. See details <%s>",
                     envBean.getEnv_name(),
                     envBean.getStage_name(),
                     webLink);

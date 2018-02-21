@@ -429,7 +429,7 @@ def _get_commit_info(request, commit, repo=None, branch='master'):
         return build['repo'], build['branch'], build['commitDate']
 
     if not repo:
-        # Without repo, we can not call github api, return None
+        # Without repo, we cannot call github api, return None
         log.error("Repo is expected when query based on commit which has no build")
         return None, None, None
 

@@ -191,7 +191,7 @@ public class EnvDeploys {
         authorizer.authorize(sc, new Resource(envBean.getEnv_name(), Resource.Type.ENV), Role.OPERATOR);
         String operator = sc.getUserPrincipal().getName();
         if(StringUtils.isEmpty(buildId)) {
-            throw new TeletaanInternalException(Response.Status.BAD_REQUEST, "Build id can not be empty.");
+            throw new TeletaanInternalException(Response.Status.BAD_REQUEST, "Build id cannot be empty.");
         }
         String deployId = deployHandler.deploy(envBean, buildId, description, operator);
         LOG.info("Successfully create deploy {} for env {}/{} by {}.", deployId, envName, stageName, operator);

@@ -40,10 +40,10 @@ class ServerlessClient(BaseClient):
     def __init__(self, env_name, stage, build, script_variables):
         """build contains build information in json format. It contains information defined in types/build.py.
         """
-        self._env_name = utils.check_not_none(env_name, 'env_name can not be None')
-        self._stage = utils.check_not_none(stage, 'stage name can not be None')
-        self._build = json.loads(utils.check_not_none(build, 'build can not be None'))
-        self._script_variables = json.loads(utils.check_not_none(script_variables, 'script_variables can not be None'))
+        self._env_name = utils.check_not_none(env_name, 'env_name cannot be None')
+        self._stage = utils.check_not_none(stage, 'stage name cannot be None')
+        self._build = json.loads(utils.check_not_none(build, 'build cannot be None'))
+        self._script_variables = json.loads(utils.check_not_none(script_variables, 'script_variables cannot be None'))
         self._deploy_id = uuid.uuid4().hex
               
     def send_reports(self, env_reports=None):
